@@ -1,0 +1,196 @@
+# dados.yaml - Mind map Caso DataPulse (Fase 1, Grupo 1)
+# Estrutura: contexto (faixa inicial), arvore (o mapa), matriz (tabela) e glossario (consulta).
+# Regra: cada "nome" de nó deve ser ÚNICO (o painel de detalhe usa o nome como chave).
+
+contexto:
+  casos: "No home office, a diretoria pediu monitoramento invasivo; no RH, a triagem automatizada discriminou candidatos."
+  perguntas: "Onde termina o direito de monitorar do empregador e começa a invasão de privacidade? Como o técnico de TI deve agir diante de um viés algorítmico?"
+
+arvore:
+  nome: Caso DataPulse (Grupo 1)
+  resumo: "Análise de dois casos críticos de IA envolvendo privacidade no home office e viés na triagem de currículos."
+  detalhe: |
+    DataPulse Soluções: empresa de sistemas web e banco de dados. Duas situações críticas
+    envolvendo IA: monitoramento de colaboradores em home office e triagem de currículos no RH.
+    Pergunta central: onde termina o direito de monitorar do empregador e começa a invasão
+    de privacidade? Como o profissional de TI deve agir diante de um viés algorítmico?
+  filhos:
+    - nome: Situações-problema
+      cor: "#E06666"
+      resumo: "Os dois casos analisados, cada um com o problema e a sua consequência."
+      detalhe: Os dois casos analisados, cada um com o problema e a sua consequência.
+      filhos:
+        - nome: "Home office: vigilância"
+          resumo: "O monitoramento invasivo ignorou o Privacy by Design."
+          detalhe: |
+            **Problema:** a diretoria pediu um algoritmo de IA que captura telas e mede o ritmo
+            de digitação (frequência de teclas) dos colaboradores.
+
+            **Consequência:** arquitetura intrusiva, com coleta excessiva de dados sem necessidade
+            operacional real, ignorando Privacy by Design e minimização de dados.
+        - nome: "RH: triagem enviesada"
+          resumo: "Ferramenta descartou candidatos por idade e região, sem transparência."
+          detalhe: |
+            **Problema:** a ferramenta de triagem de currículos descartou sistematicamente
+            candidatos de bairros periféricos e com mais de 45 anos (etarismo e preconceito geográfico).
+
+            **Consequência:** falta de auditabilidade, modelo sem explicação (Black Box) e
+            discriminação algorítmica automatizada nos processos seletivos.
+
+    - nome: Conflitos técnicos
+      pilar: Técnico
+      cor: "#4F9DFF"
+      resumo: "Erros na engenharia dos sistemas: dados, modelo e arquitetura."
+      detalhe: |
+        O que está errado na engenharia dos sistemas: dados, modelo e arquitetura.
+        (Pilar técnico: arquitetura algorítmica, captura e triagem de dados.)
+      filhos:
+        - nome: Viés nos dados (Data Bias)
+          resumo: "Uso de bases históricas viciadas sem auditoria."
+          detalhe: |
+            Uso de bases históricas viciadas ou regras tendenciosas no algoritmo do RH,
+            sem sanitização dos dados e sem auditoria preventiva.
+        - nome: Caixa-preta (Black Box)
+          resumo: "Impossibilidade de justificar o descarte de candidatos."
+          detalhe: |
+            Impossibilidade de justificar tecnicamente por que determinados candidatos
+            foram descartados. Sem explicabilidade, não há auditoria.
+        - nome: Sem Privacy by Design
+          resumo: "Falta de proteção da privacidade desde a concepção do sistema."
+          detalhe: |
+            O algoritmo de monitoramento não foi pensado para proteger a privacidade nem para
+            minimizar a coleta de dados desde a concepção.
+
+    - nome: Conflitos éticos
+      pilar: Ético e comportamental
+      cor: "#FF9F43"
+      resumo: "Fronteira entre o poder do empregador e os direitos do trabalhador."
+      detalhe: |
+        Fronteira entre o poder de gestão do empregador e os direitos fundamentais do trabalhador.
+        Medir produtividade deve se basear em entregas e metas, não em vigiar a rotina em casa.
+      filhos:
+        - nome: Abuso do poder de vigilância
+          resumo: "Desequilíbrio entre monitorar e violar a intimidade do colaborador."
+          detalhe: |
+            Desequilíbrio entre monitorar equipamentos corporativos e violar a intimidade
+            e a dignidade do colaborador em home office. O direito de fiscalizar cessa quando
+            atinge a intimidade.
+        - nome: Discriminação e exclusão social
+          resumo: "O sistema de RH promoveu exclusão por etarismo e origem."
+          detalhe: |
+            Violação dos princípios de equidade e respeito à diversidade: o sistema do RH
+            promove exclusão por etarismo e origem geográfica.
+
+    - nome: Conflitos comportamentais
+      pilar: Ético e comportamental
+      cor: "#90C870"
+      resumo: "Análise da conduta dos envolvidos e o papel do profissional de TI."
+      detalhe: |
+        Análise de atitude profissional e relações de trabalho: o que deu errado na conduta
+        das pessoas e como o técnico deveria agir.
+      filhos:
+        - nome: Falhas de conduta
+          resumo: "Erros de ética e comunicação na Diretoria, RH e TI."
+          detalhe: Falhas de ética, postura e comunicação identificadas em cada área.
+          filhos:
+            - nome: Diretoria
+              resumo: "Ordenou vigilância sem avaliar impactos morais."
+              detalhe: |
+                Ordenou a criação de ferramentas de vigilância invasiva sem avaliar
+                antes os impactos morais e legais.
+            - nome: RH (setor)
+              resumo: "Usou ferramenta sem validar critérios discriminatórios."
+              detalhe: |
+                Usou ferramenta automatizada sem validar os critérios de seleção e
+                sem checar vieses discriminatórios.
+            - nome: Equipe de TI
+              resumo: "Risco de omissão ao cumprir ordens antiéticas às cegas."
+              detalhe: |
+                Risco de omissão ou de cumprir ordens antiéticas às cegas, por falta de
+                canais formais de denúncia e de alinhamento de conduta.
+        - nome: Postura do técnico
+          resumo: "Como o profissional de TI deve agir diante desses problemas."
+          detalhe: Como o profissional de TI deve agir (não é um mero executor de código).
+          filhos:
+            - nome: Diante de ordem antiética
+              resumo: "Recusar implementação e argumentar os riscos."
+              detalhe: |
+                Postura proativa e consultiva: argumentar formalmente os riscos operacionais,
+                legais e de reputação, e recusar-se a implementar regras discriminatórias ou invasivas.
+            - nome: Diante de descumprimento
+              resumo: "Apontar inconformidades ao Comitê e propor revisão."
+              detalhe: |
+                Apontar as inconformidades ao Comitê de Crise e Conduta, propor a revisão dos
+                parâmetros da IA e buscar alternativas técnicas com métricas transparentes
+                de entregas e governança.
+
+    - nome: Conflitos legais
+      cor: "#B48EAD"
+      resumo: "Onde os casos esbarram na lei brasileira (LGPD e CF)."
+      detalhe: Onde os dois casos esbarram na lei brasileira.
+      filhos:
+        - nome: LGPD
+          resumo: "Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
+          detalhe: Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+          filhos:
+            - nome: Minimização (Art. 6º, III)
+              resumo: "Coleta excessiva de telas e digitação viola o princípio."
+              detalhe: Coleta desproporcional e excessiva de imagens de tela e de teclas digitadas.
+            - nome: Não discriminação (Art. 6º, IX)
+              resumo: "Tratamento de dados não pode ter fins abusivos."
+              detalhe: Proíbe o tratamento de dados para fins discriminatórios ilícitos ou abusivos.
+            - nome: Revisão de decisões (Art. 20)
+              resumo: "Direito de pedir explicação sobre o descarte automatizado."
+              detalhe: |
+                Candidatos descartados pela IA do RH têm direito a pedir explicação
+                e revisão humana do descarte.
+        - nome: CF e legislação trabalhista
+          resumo: "Direitos fundamentais e proteção contra discriminação no trabalho."
+          detalhe: Direitos fundamentais e proteção contra discriminação no trabalho.
+          filhos:
+            - nome: Intimidade (Art. 5º, X)
+              resumo: "Violação do direito fundamental à intimidade e à privacidade (CF/88)."
+              detalhe: Violação do direito fundamental à intimidade e à privacidade (CF/88).
+            - nome: Lei 9.029/1995
+              resumo: "Normas de proteção contra práticas discriminatórias no acesso ao emprego."
+              detalhe: Normas de proteção contra práticas discriminatórias no acesso ao emprego.
+
+    - nome: Matriz de mapeamento
+      cor: "#E5C07B"
+      resumo: "Tabela que cruza cada situação com seus problemas e conflitos."
+      detalhe: Tabela que cruza cada situação com seus problemas e conflitos (veja abaixo do mapa).
+
+    - nome: Consolidação
+      cor: "#56B6C2"
+      resumo: "Diagnóstico final para o Código de Conduta e Mitigação de Viés."
+      detalhe: |
+        **Rascunho para o grupo revisar.** Nos dois casos, a tecnologia foi usada sem avaliar
+        impacto ético e legal: no home office, coleta excessiva e vigilância invasiva; no RH,
+        dados viciados e modelo sem explicação gerando discriminação. O problema não é a IA em si,
+        e sim a falta de governança, de auditoria e de postura crítica de quem decide e de quem
+        desenvolve. Este diagnóstico serve de base para o Código de Conduta Ética da TI e para
+        a Proposta de Mitigação de Viés da Fase 2.
+
+matriz:
+  - situacao: Home office
+    problema: Vigilância invasiva (captura de tela e ritmo de digitação)
+    conflito_etico_comportamental: Abuso do poder de vigilância; diretoria pediu a ferramenta sem avaliar impactos
+    conflito_tecnico_legal: Sem Privacy by Design e sem minimização; LGPD Art. 6º, III; CF Art. 5º, X
+  - situacao: Triagem RH
+    problema: Viés contra candidatos acima de 45 anos e de bairros periféricos
+    conflito_etico_comportamental: Discriminação e exclusão social; RH usou a ferramenta sem validar critérios
+    conflito_tecnico_legal: Data Bias e Black Box; LGPD Art. 6º, IX e Art. 20; Lei 9.029/1995
+
+glossario:
+  - termo: LGPD
+    definicao: Lei brasileira (13.709/2018) que regula como dados pessoais podem ser coletados e usados.
+  - termo: Privacy by Design
+    definicao: Pensar na proteção da privacidade desde o início do projeto, não depois que o sistema está pronto.
+  - termo: Minimização de dados
+    definicao: Coletar só o necessário para a finalidade. Telas e teclas digitadas passam muito disso.
+  - termo: Viés algorítmico
+    definicao: Quando o sistema trata grupos de forma injusta, geralmente por aprender com dados históricos já enviesados.
+  - termo: Transparência e explicabilidade
+    definicao: Conseguir explicar por que o sistema tomou determinada decisão (o oposto da Black Box).
+  - termo: Auditoria de algoritmos
+    definicao: Revisar como o sistema decide, com quais dados e se há discriminação, deixando registro rastreável.
