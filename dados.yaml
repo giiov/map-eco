@@ -164,12 +164,10 @@ arvore:
       cor: "#56B6C2"
       resumo: "Diagnóstico final para o Código de Conduta e Mitigação de Viés."
       detalhe: |
-        **Rascunho para o grupo revisar.** Nos dois casos, a tecnologia foi usada sem avaliar
-        impacto ético e legal: no home office, coleta excessiva e vigilância invasiva; no RH,
-        dados viciados e modelo sem explicação gerando discriminação. O problema não é a IA em si,
-        e sim a falta de governança, de auditoria e de postura crítica de quem decide e de quem
-        desenvolve. Este diagnóstico serve de base para o Código de Conduta Ética da TI e para
-        a Proposta de Mitigação de Viés da Fase 2.
+        O uso de IA sem governança nesses dois casos gerou abusos técnicos, éticos e legais.
+        Home Office: Capturar tela e digitação é excessivo, pois viola a LGPD (minimização de dados) e a TI errou ao aceitar criar essa vigilância sem contestar a invasão de privacidade.
+        RH: A rejeição por idade e endereço revela viés algorítmico. O sistema agiu como uma "caixa-preta", onde decidia sem explicar o motivo, violando o princípio da não discriminação. A TI errou ao confiar no sistema sem auditar como ele escolhia os candidatos.
+        Portanto, não foram falhas do código, mas sim falta de governança e omissão ética da TI, que obedeceu a ordens em vez de barrar sistemas invasivos e preconceituosos.
 
 matriz:
   - situacao: Home office

@@ -237,6 +237,14 @@ with col_texto:
     # Conteúdo do detalhe
     st.markdown(info["detalhe"])
     
+    if escolhido == "Matriz de mapeamento":
+        st.markdown("<br>", unsafe_allow_html=True)
+        df = pd.DataFrame(dados["matriz"]).rename(columns={
+            "situacao": "Situação", "problema": "Problema identificado",
+            "conflito_etico_comportamental": "Conflito ético / comportamental",
+            "conflito_tecnico_legal": "Conflito técnico / legal"})
+        st.dataframe(df, hide_index=True, use_container_width=True)
+
     # Subtópicos do ramo
     if info["filhos_nomes"]:
         st.markdown("---")
@@ -246,14 +254,42 @@ with col_texto:
 
 st.divider()
 
-# Matriz e Glossário
-st.subheader("Matriz de mapeamento")
-df = pd.DataFrame(dados["matriz"]).rename(columns={
-    "situacao": "Situação", "problema": "Problema identificado",
-    "conflito_etico_comportamental": "Conflito ético / comportamental",
-    "conflito_tecnico_legal": "Conflito técnico / legal"})
-st.dataframe(df, hide_index=True, use_container_width=True)
-
+# Glossário
 with st.expander("Glossário de conceitos"):
     for g in dados["glossario"]:
         st.markdown(f"**{g['termo']}:** {g['definicao']}")
+
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("### 👥 Equipe - 3º AMS")
+
+cols = st.columns(4)
+
+integrantes = [
+    {"nome": "Antonella Prucoli"},
+    {"nome": "Bruno Holanda"},
+    {"nome": "Emilly Vitória"},
+    {"nome": "Giovana Cipulo"},
+    {"nome": "Heloisa Fernandes"},
+    {"nome": "Heloisa Torres"},
+    {"nome": "Maria Eduarda Chella"},
+    {"nome": "Matheus Amorim"}
+]
+
+cores = ["#E06666", "#4F9DFF", "#FF9F43", "#90C870", "#B48EAD", "#E5C07B", "#56B6C2", "#E06666"]
+
+for i, integrante in enumerate(integrantes):
+    cor = cores[i % len(cores)]
+    with cols[i % 4]:
+        st.markdown(f"""
+        <div style="
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top: 4px solid {cor};
+            padding: 1.5rem 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            background-color: rgba(255,255,255,0.02);
+            margin-bottom: 1rem;
+        ">
+            <h4 style="margin: 0; font-size: 1.1rem;">{integrante['nome']}</h4>
+        </div>
+        """, unsafe_allow_html=True)
